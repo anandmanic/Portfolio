@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Grid Format</title>
+    <link rel="stylesheet" href="./Gridstyle.css">
+    <style>
+        body{
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "nav article ads"
+                "nav footer footer";
+            grid-template-rows: 80px 1fr 70px;
+            grid-template-columns: 20% 1fr 15%;
+            grid-row-gap: 10px;
+            grid-column-gap: 10px;
+            height: 100vh;
+            margin: 0;
+        }
+        ul.a {
+            list-style-type: square;
+        }
+        header, footer, article, nav, div{
+            padding: 1%;
+            background: rgb(191, 252, 191);
+        }
+        #pageHeader{
+            grid-area: header;
+            padding-top: 0%;
+        }
+        #pageFooter{
+            grid-area: footer;
+        }
+        #mainArticle{ 
+            grid-area: article;
+            background-image: url("./Teju-1.png");
+        }
+        #mainNav{ 
+            grid-area: nav;
+            background-image: url("./bl.jpg");
+        }
+        #siteAds{ 
+            grid-area: ads; 
+        }   
+        @media all and (max-width: 1200px) {
+        body{
+            background: lightblue;
+            grid-template-areas: 
+            "header"
+            "article"
+            "ads"
+            "nav"
+            "footer";
+            grid-template-rows: 80px 1fr 70px 1fr 70px;  
+            grid-template-columns: 1fr;
+        }
+    }
+    </style>
+    <body>
+        <header id="pageHeader"><h1><center>Aari Collections</center></h1></header>
+        <article id="mainArticle">
+            <!-- <div style="z-index: 1;"> -->
+                <!-- <img src="./Teju-1.png" alt="Snow" style="filter:blur(4px)"> -->
+                <h3>
+                    <p>Aari work is a type of Indian embroidery that involves intricate thread work and a variety of stitches and materials.
+                    <ul class="a">
+                    <li>Materials</li>
+                    </ul>
+                    Aari work uses a hooked needle called an aari, as well as colorful beads, stones, zari, and gold or silver thread.
+                    <li>Stitches</li>
+                    Aari work uses a variety of stitches, including chain, backstitch, satin, Kutch, Zardosi, and beadwork.
+                    <li>Design</li>
+                    Aari work often features motifs inspired by nature, such as leaves, flowers, trees, birds, and animals. 
+                    <li>Process</li>
+                    Aari work involves stretching fabric over a frame, tracing a design, and then embroidering the design with the thread. 
+                    <li>Products</li>
+                    Aari work is used to decorate a variety of items, including blouses, dresses, sarees, churidars, bedcovers, 
+                    cushion covers, purses, handbags, and wall hangings.
+                </h3>
+            <!-- </div> -->
+                </p></article>
+        <nav id="mainNav"><h3>Aari Varieties</h3></nav>
+        <div id="siteAds">Advertisements:<br>
+            <img src="./all_colors__flhn5cmb1t26_large_2x.jpg" alt="Apple iPhone 16" width="170" height="80">
+        </div>
+        <footer id="pageFooter">Thanks for visiting our page</footer>
+        <div style="display: flex;justify-content: space-evenly; width: 100%;">
+            <div>Inline</div>
+            <div>Block</div>
+            <div>Grid</div>
+            <div>Flex</div>
+        </div>
+    </body>
+</html>
